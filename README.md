@@ -6,6 +6,22 @@ I studied the Quadratic Assignment Problem (QAP) and I implemented heuristic and
 
 I used Fortran 90 with compiler  Silverfrost ftn95.
 
+## Modern version
+
+The folder [`modern`](modern) contains a reimplementation of these algorithms in
+standard Fortran 2018 (gfortran or LLVM flang, no external libraries), with the
+defects of the original code fixed, and two reference algorithms from the
+literature: Taillard's robust tabu search and HAS-QAP. It also contains tests,
+the best known values of the QAPLIB instances, and the experiment of the
+thesis' final table rerun with the corrected code. See
+[`modern/README.md`](modern/README.md).
+
+The code described below is the original one, as it was used for the thesis.
+It does not compile with standard compilers such as gfortran, and its tabu
+search and ant colony differ from the algorithms the thesis describes, so the
+corresponding columns of the thesis' final table do not measure those
+algorithms.
+
 
 The files are:
 
